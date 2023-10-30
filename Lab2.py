@@ -75,11 +75,11 @@ def calc_median_temperature2(input_temperature_list):
     temp_ascending_length = len(temp_ascending)
 
     if temp_ascending_length % 2 == 0:
-        middle_value1 = temp_ascending[temp_ascending_length / 2]
-        middle_value2 = temp_ascending[(temp_ascending_length / 2) + 1]
+        middle_value1 = temp_ascending[(temp_ascending_length // 2) - 1]
+        middle_value2 = temp_ascending[temp_ascending_length // 2]
         median_temp = (middle_value1 + middle_value2) / 2
     else:
-        median_temp = temp_ascending[(temp_ascending_length - 1) / 2]
+        median_temp = temp_ascending[temp_ascending_length // 2]
 
     print("Median Temp = " + str(median_temp))
 
